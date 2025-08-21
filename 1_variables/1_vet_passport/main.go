@@ -13,5 +13,11 @@ import "fmt"
 // Ему 2 года
 // Он кот
 func main() {
+	var name string = "Евгений"
+	var age int = 3
+	var kind string = "кот"
 
+	fmt.Println("Моего питомца зовут", name)
+	fmt.Println("Ему", age, "года")
+	fmt.Println("Он", kind)
 }
