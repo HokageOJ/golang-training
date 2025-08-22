@@ -23,9 +23,18 @@ func converterTemp(temp float64, fromUnit string, toUnit string) float64 {
 		}
 	} else if fromUnit == "F" {
 		if toUnit == "C" {
-			return (temp - 32) / (9/5)
+			return (temp - 32) * 5/9
 		} else if toUnit == "K" {
-			return (temp - 32) * (5/9) + 273.15
+			return (temp - 32) * 5/9 + 273.15
+		} else {
+			fmt.Printf("Вы передали некорректную единицу измерения в аргумент 'toUnit': %s\n", toUnit)
+			return 0.0
+		}
+	} else if fromUnit == "K" {
+		if toUnit == "C" {
+			return temp - 273.15
+		} else if toUnit == "F" {
+			return temp * 9/5 - 459.67
 		} else {
 			fmt.Printf("Вы передали некорректную единицу измерения в аргумент 'toUnit': %s\n", toUnit)
 			return 0.0
