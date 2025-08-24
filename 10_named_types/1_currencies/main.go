@@ -18,6 +18,17 @@ import "fmt"
 	Внутри функций используйте приведение типов.
 */
 
+type rubbles float64
+type dollars float64
+
+func rubblesToDollars(money rubbles, rate rubbles) dollars { 
+	return dollars(money / rate) 
+}
+
 func main() {
-	
+	var rubblesMoney rubbles = 1000.0
+	//var dollarsMoney dollars = 10.0
+
+	// result := rubblesMoney + dollarsMoney
+	fmt.Println(rubblesToDollars(rubblesMoney, rubbles(90)))
 }
