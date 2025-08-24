@@ -11,5 +11,9 @@ import "fmt"
 //
 // Через 5 лет вам будет 25 лет
 func main() {
+	var age int = 25
+	var yearsLater int = 5
+	var futureAge int = age + yearsLater
 
+	fmt.Println("Через", yearsLater, "лет вам будет", futureAge, "лет")
 }
