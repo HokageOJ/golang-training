@@ -12,6 +12,20 @@ import "fmt"
 	2) Напишите методы для перевода типов в другие единицы измерения.
 */
 
-func main() {
+type Celsius float64
+type Fahrenheit float64
+type Kelvin float64
 
+func (temp Celsius) String() string {
+	return fmt.Sprintf("%.1f°С", temp)
+} 
+func (temp Celsius) ToFahrenheit() Fahrenheit {
+	return Fahrenheit(temp * 9/5 + 32)
+}
+
+func main() {
+	var celsiusTemp Celsius = 20.0
+	
+	fmt.Println(celsiusTemp.String())
+	fmt.Println(celsiusTemp.ToFahrenheit())
 }
