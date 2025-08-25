@@ -28,10 +28,30 @@ func (temp Celsius) ToKelvin() Kelvin {
 	return Kelvin(temp + 273.15)
 }
 
+func (temp Fahrenheit) String() string {
+	return fmt.Sprintf("%.1f°F", temp)
+}
+
+func (temp Fahrenheit) ToCelsius() Celsius {
+	return Celsius((temp - 32) * 5/9)
+}
+
+func (temp Fahrenheit) ToKelvin() Kelvin {
+	return Kelvin((temp - 32) * 5/9 + 273.15)
+}
+
 func main() {
 	var celsiusTemp Celsius = 20.0
 	
 	fmt.Println(celsiusTemp.String())
 	fmt.Println(celsiusTemp.ToFahrenheit())
 	fmt.Println(celsiusTemp.ToKelvin())
+	fmt.Println()
+
+	var fahrenheitTemp Fahrenheit = 10.0
+
+	fmt.Println(fahrenheitTemp.String())
+	fmt.Println(fahrenheitTemp.ToCelsius())
+	fmt.Println(fahrenheitTemp.ToKelvin())
+	fmt.Println()
 }
