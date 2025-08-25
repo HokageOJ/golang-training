@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
 	---------------
@@ -40,6 +42,18 @@ func (temp Fahrenheit) ToKelvin() Kelvin {
 	return Kelvin((temp - 32) * 5/9 + 273.15)
 }
 
+func (temp Kelvin) String() string {
+	return fmt.Sprintf("%.1fK", temp)
+}
+
+func (temp Kelvin) ToCelsius() Celsius {
+	return Celsius(temp - 273.15)
+}
+
+func (temp Kelvin) ToFahrenheit() Fahrenheit {
+	return Fahrenheit(temp * 9/5 - 459.67)
+}
+
 func main() {
 	var celsiusTemp Celsius = 20.0
 	
@@ -54,4 +68,10 @@ func main() {
 	fmt.Println(fahrenheitTemp.ToCelsius())
 	fmt.Println(fahrenheitTemp.ToKelvin())
 	fmt.Println()
+	
+	var kelvinTemp Kelvin = 5.0
+
+	fmt.Println(kelvinTemp.String())
+	fmt.Println(kelvinTemp.ToCelsius())
+	fmt.Println(kelvinTemp.ToFahrenheit())
 }
