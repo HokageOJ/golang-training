@@ -11,5 +11,8 @@ import "fmt"
 //
 // В вашем имени 4 букв(ы)
 func main() {
+	var name string = "Oleg"
+	var nameLength int = len(name)
 
+	fmt.Println("В вашем имени", name, nameLength, "букв(ы)")
 }
