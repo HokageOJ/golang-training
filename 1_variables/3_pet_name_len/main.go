@@ -11,5 +11,8 @@ import "fmt"
 //
 // В кличке Рекс 4 буквы
 func main() {
+	var animalName string = "Murzik"
+	var animalNameLength int = len(animalName)
 
+	fmt.Println("В кличке", animalName, animalNameLength, "букв(ы)")
 }
