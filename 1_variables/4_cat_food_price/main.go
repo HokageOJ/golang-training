@@ -11,5 +11,8 @@ import "fmt"
 //
 // Для кошки куплено 4 пачки/пачек Вискаса на сумму 1000 рублей
 func main() {
+	var packetsCount int = 12
+	var packetPrice int = 300
 
+	fmt.Println("Для кошки куплено", packetsCount, "пачки/пачек Вискаса на сумму", packetPrice*packetsCount,"рублей")
 }
