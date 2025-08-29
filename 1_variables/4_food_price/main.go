@@ -14,5 +14,5 @@ func main() {
 	var paperPacketsCount int = 15
 	var paperPacketPrice = 300
 
-	fmt.Println("Я купил", paperPacketsCount, "пачки/пачек бумаги А4 "Снегурочка" на сумму", paperPacketsCount * paperPacketPrice, "рублей")
+	fmt.Println("Я купил", paperPacketsCount, "пачки/пачек бумаги А4 \"Снегурочка\" на сумму", paperPacketsCount * paperPacketPrice, "рублей")
 }
