@@ -25,5 +25,28 @@ import "fmt"
 */
 
 func main() {
-	var days_of_week [7]string = [7]string{"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"}
+	var daysOfWeek [7]string = [7]string{"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"}
+
+	fmt.Println("Дни недели: ")
+
+	for i := 0; i < len(daysOfWeek); i++ {
+		fmt.Printf("%d) %s\n", i + 1, daysOfWeek[i])
+	}
+
+	fmt.Print("Выберите текущий день недели: ")
+	
+	var num int
+	
+	fmt.Scan(&num)
+	
+	if num < 1 || num > 7 {
+		fmt.Printf("Вы ввели не правильный день недели: %d", num)
+		return
+	}
+
+	if num <= 5 {
+		fmt.Printf("%s - это рабочий день!", daysOfWeek[num - 1])
+	} else {
+		fmt.Printf("%s - это выходной день!", daysOfWeek[num - 1])
+	} 
 }
