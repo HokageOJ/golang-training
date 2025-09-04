@@ -19,4 +19,20 @@ import "fmt"
 
 func main() {
 	var numbers [20]int = [20]int{12, -5, 8, -23, 45, -7, 0, 31, -19, 52, -14, 3, -42, 17, -9, 25, -2, 11, -36, 6}
+
+	var positives int
+	var negatives int
+
+	for i := 0; i < len (numbers); i++ {
+		if numbers[i] < 0 {
+			negatives++
+		}
+
+		if numbers [i] > 0 {
+			positives++
+		}
+	}
+	
+	fmt.Printf("Положительных чисел: %d\n", positives)
+	fmt.Printf("Отрицательных чисел: %d\n", negatives)
 }
