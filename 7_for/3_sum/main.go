@@ -16,5 +16,13 @@ import "fmt"
 */
 
 func main() {
+	var numbers [10] int = [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
+	var sum int
+
+	for i := 0; i < len(numbers); i++ {
+		sum = sum + numbers[i]
+	}
+
+	fmt.Printf("Сумма элементов массива: %d", sum)
 }
