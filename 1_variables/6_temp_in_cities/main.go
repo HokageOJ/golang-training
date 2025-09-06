@@ -11,6 +11,14 @@ import "fmt"
 //
 // В городе Сочи сейчас 23 °C
 // В городе Новосибирск сейчас 15 °C
-func main() {
 
+func main() {
+	var city string = "Москва"
+	var city2 string = "Пенза"
+	var tempMoscow int = 23
+	var tempPenza = 16
+
+	fmt.Printf("В городе %s сейчас %d °C\n", city, tempMoscow)
+	fmt.Printf("В городе %s сейчас %d °C\n", city2, tempPenza)
+	
 }
