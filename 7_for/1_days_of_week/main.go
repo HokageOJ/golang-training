@@ -17,5 +17,9 @@ import "fmt"
 */
 
 func main() {
-
+	var daysOfWeek [7]string = [7]string{"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"}
+	
+	for i := 0; i < len(daysOfWeek); i++ {
+		fmt.Printf("День %d: %s\n", i + 1, daysOfWeek[i])
+	}
 }
