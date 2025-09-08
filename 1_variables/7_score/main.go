@@ -17,5 +17,15 @@ import "fmt"
 // Игра окончена! Итоговый счёт: 100
 
 func main() {
+	var score int
+	
+	fmt.Printf("Игра началась! Текущий счёт: %d\n", score)
+	score += 5
+	fmt.Printf("Вы убили зомби! Текущий счёт: %d\n", score)
+	score += 20
+	fmt.Printf("Вы нашли сокровище! Текущий счёт: %d\n", score)
+	score += 75
+	fmt.Printf("Вы спасли мирного жителя! Текущий счёт: %d\n", score)
+	fmt.Printf("Игра окончена! Итоговый счёт: %d\n", score)
 
 }
