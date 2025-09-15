@@ -13,5 +13,10 @@ import "fmt"
 // Поздравляю с 26 -летием!
 // Желаю счастья и здоровья!
 func main() {
+	var name string = "Олег"
+	var age int = 26
 
+	fmt.Printf("Дорогой(ая) %s!\n", name)
+	fmt.Printf("Поздравляю с %d - летием!\n", age)
+	fmt.Printf("Желаю счастья и здоровья!\n")
 }
